@@ -1,87 +1,45 @@
 {
   "intents": [
     {
-      "tag": "greeting",
-      "patterns": [
-        "Hola",
-        "Buen dia",
-        "Buen día",
-        "como estas",
-        "¿Cómo estás?",
-        "Qué tal?",
-        "Que tal",
-        "Buenas tardes",
-        "Buena tarde",
-        "Buenas noches",
-        "Lindo dia"
-      ],
-      "responses": [
-        "Hola, cómo puedo ayudarte?",
-        "Hola 😃",
-        "Hola, gracias por hablarme"
-      ]
+      "tag": "greet",
+      "patterns": ["Hola", "Buen dia", "como estas", "Que tal", "Buenas tardes", "Buena tarde", "Buenas noches", "Lindo dia"],
+      "responses": ["Hola, Como puedo ayudarte?", "Hola :)"]
     },
     {
       "tag": "goodbye",
-      "patterns": ["Bye", "See you later", "Goodbye"],
-      "responses": [
-        "See you later, thanks for visiting",
-        "Have a nice day",
-        "Bye! Come back again soon."
-      ]
+      "patterns": ["Adios", "Nos vemos luego", "Bye"],
+      "responses": ["Nos vemos luego", "Ten un lindo dia ^_^", "Adiós!, hasta pronto"]
     },
     {
       "tag": "thanks",
-      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
-      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+      "patterns": ["Gracias", "Muchas gracias", "Fue de ayuda"],
+      "responses": ["Feliz de ayudarte!", "Un placer ayudarte"]
     },
     {
-      "tag": "items",
+      "tag": "take_advice",
       "patterns": [
-        "Which items do you have?",
-        "What kinds of items are there?",
-        "What do you sell?"
+        "Senescyt", "consultar pagina senescyt", "consultar titulos"
       ],
       "responses": [
-        "We sell coffee and tea",
-        "We have coffee and tea"
+        "Deseas consultar la pagina del Senescyt?"
       ]
     },
     {
-      "tag": "payments",
+      "tag": "decision_1",
       "patterns": [
-        "Do you take credit cards?",
-        "Do you accept Mastercard?",
-        "Can I pay with Paypal?",
-        "Are you cash only?"
+        "Si", "No"
       ],
       "responses": [
-        "We accept VISA, Mastercard and Paypal",
-        "We accept most major credit cards, and Paypal"
+        "Me ayudas con tu numero de cedula?"
       ]
     },
     {
-      "tag": "delivery",
+      "tag": "decision_2",
       "patterns": [
-        "How long does delivery take?",
-        "How long does shipping take?",
-        "When do I get my delivery?"
+        "Si", "No"
       ],
       "responses": [
-        "Delivery takes 2-4 days",
-        "Shipping takes 2-4 days"
-      ]
-    },
-    {
-      "tag": "funny",
-      "patterns": [
-        "Tell me a joke!",
-        "Tell me something funny!",
-        "Do you know a joke?"
-      ],
-      "responses": [
-        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
-        "What did the buffalo say when his son left for college? Bison."
+        "Me ayudas con tu correo electronico?"
       ]
     }
   ]

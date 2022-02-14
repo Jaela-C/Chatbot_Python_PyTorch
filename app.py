@@ -1,12 +1,13 @@
 from tkinter import *
 from chat import get_response, bot_name
 
-BG_GRAY = "#ABB2B9"
-BG_COLOR = "#17202A"
+BG_PRIMARY = "#707E8B"
+BG_SECONDARY = "#969FF9"
+BG_COLOR = "#394959"
 TEXT_COLOR = "#EAECEE"
 
 FONT = "Roboto 14"
-FONT_BOLD = "Roboto 13 bold"
+FONT_BOLD = "Roboto 16 bold"
 
 class ChatBotApplication:
     
@@ -23,12 +24,12 @@ class ChatBotApplication:
         self.window.configure(width=470, height=550, bg=BG_COLOR)
 
         #head label
-        head_label = Label(self.window, bg=BG_COLOR, fg=TEXT_COLOR, text="Bienvenidos", font=FONT_BOLD, pady=10)
+        head_label = Label(self.window, bg=BG_COLOR, fg=TEXT_COLOR, text="Bienvenidos", font=FONT_BOLD, pady=15)
         head_label.place(relwidth=1)
 
         #divider
-        line = Label(self.window, width=450, bg=BG_GRAY)
-        line.place(relwidth=1, rely=0.07, relheight=0.012)
+        line = Label(self.window, width=550, bg=BG_PRIMARY)
+        line.place(relwidth=1, rely=0.07, relheight=0.12)
 
         #text widget
         self.text_widget = Text(self.window, width=20, height=2, bg=BG_COLOR, fg=TEXT_COLOR, font=FONT, padx=5, pady=5)
@@ -41,17 +42,17 @@ class ChatBotApplication:
         scrollbar.configure(command=self.text_widget.yview)
 
         #bottom label
-        bottom_label = Label(self.window, bg=BG_GRAY, height=80)
+        bottom_label = Label(self.window, bg=BG_PRIMARY, height=80)
         bottom_label.place(relwidth=1, rely=0.825)
 
         #message box
-        self.message_box = Entry(bottom_label, bg="#2C3E50", fg=TEXT_COLOR, font=FONT)
+        self.message_box = Entry(bottom_label, bg="#394959", fg=TEXT_COLOR, font=FONT)
         self.message_box.place(relwidth=0.74, relheight=0.06, rely=0.008, relx=0.011)
         self.message_box.focus()
         self.message_box.bind("<Return>", self._on_enter_press)
 
         #send button
-        send_button = Button(bottom_label, text="Enviar", font=FONT_BOLD, width=20, bg=BG_GRAY, command=lambda: self._on_enter_press(None))
+        send_button = Button(bottom_label, text="Enviar", fg=TEXT_COLOR, font=FONT, width=20, bg=BG_PRIMARY, command=lambda: self._on_enter_press(None))
         send_button.place(relx=0.77, rely=0.008, relheight=0.06, relwidth=0.22)
 
     def _on_enter_press(self, event):
